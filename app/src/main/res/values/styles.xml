@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppThemeNoActionBar" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="rootContainerNoPadding">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#ccc</item>
+    </style>
+
+    <style name="rootContainer" parent="rootContainerNoPadding">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+
+    <style name="marginContainerTop">
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="marginContainerTopBottom" parent="marginContainerTop">
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="fieldsetContainerNoPadding">
+        <item name="android:background">@drawable/layout_rounded</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="fieldsetContainer" parent="fieldsetContainerNoPadding">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="defaultTextHeading" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+    <style name="textHeadingBlue" parent="defaultTextHeading">
+        <item name="android:textColor">#ff0078c0</item>
+    </style>
+
+    <style name="defaultText">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="defaultTextBold" parent="defaultText">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="defaultTextBoldItalic" parent="defaultText">
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+    <style name="defaultButton">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

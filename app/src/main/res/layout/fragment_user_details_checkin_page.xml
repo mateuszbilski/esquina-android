@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/rootContainer"
+    android:paddingBottom="0dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/marginContainerTop"
+        android:paddingBottom="0dp"
+        android:layout_marginBottom="0dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/fieldsetContainer">
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/userCheckinListView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:choiceMode="none" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/userCheckinListEmptyTextView"
+                android:text="@string/userCheckinListEmpty"
+                style="@style/defaultTextHeading"
+                android:gravity="center" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

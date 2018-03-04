@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/locationIconImageView"
+        android:background="#ffaabbcc"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Location name"
+        android:id="@+id/locationNameTextView"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="40dp"
+        style="@style/defaultText"
+        android:layout_toRightOf="@+id/locationIconImageView"
+        android:layout_alignParentBottom="false"
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:minHeight="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Address"
+        android:id="@+id/locationAddressTextView"
+        android:layout_below="@+id/locationNameTextView"
+        android:layout_alignLeft="@+id/locationNameTextView"
+        android:layout_alignStart="@+id/locationNameTextView"
+        android:layout_alignRight="@+id/locationNameTextView"
+        android:layout_alignEnd="@+id/locationNameTextView" />
+
+</RelativeLayout>

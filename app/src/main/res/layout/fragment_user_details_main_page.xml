@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    style="@style/rootContainer"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/fieldsetContainerNoPadding"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/backgroundImageView"
+                android:background="#ffbbccaa" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iconImageRelativeLayout">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/userIconImageView"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="100dp"
+                    android:background="#ffaabbcc" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="mateo081"
+                    android:id="@+id/accountNameTextView"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/userIconImageView"
+                    android:layout_toEndOf="@+id/userIconImageView"
+                    android:layout_marginTop="60dp"
+                    style="@style/defaultTextHeading"
+                    android:textStyle="bold"
+                    android:layout_alignTop="@+id/userIconImageView" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iconImageRelativeLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentTop="false"
+                android:gravity="right"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:id="@+id/buttonsBar">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FOLLOW"
+                    android:id="@+id/followButton"
+                    style="@style/defaultButton"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/fieldsetContainer" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/basic_information_title"
+                android:id="@+id/basicInformationTitleTextView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                style="@style/textHeadingBlue"
+                android:layout_marginBottom="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/first_name_label"
+                android:id="@+id/firstNameLabelTextView"
+                android:layout_below="@+id/basicInformationTitleTextView"
+                android:layout_alignLeft="@+id/basicInformationTitleTextView"
+                android:layout_alignStart="@+id/basicInformationTitleTextView"
+                style="@style/defaultTextBold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mateusz"
+                android:id="@+id/firstNameTextView"
+                android:layout_below="@+id/firstNameLabelTextView"
+                android:layout_alignLeft="@+id/firstNameLabelTextView"
+                android:layout_alignStart="@+id/firstNameLabelTextView"
+                style="@style/defaultText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/middle_name_label"
+                android:id="@+id/middleNameLabelTextView"
+                style="@style/defaultTextBold"
+                android:layout_below="@+id/firstNameTextView"
+                android:layout_alignLeft="@+id/firstNameTextView"
+                android:layout_alignStart="@+id/firstNameTextView"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Damian"
+                android:id="@+id/middleNameTextView"
+                style="@style/defaultText"
+                android:layout_below="@+id/middleNameLabelTextView"
+                android:layout_alignLeft="@+id/middleNameLabelTextView"
+                android:layout_alignStart="@+id/middleNameLabelTextView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/last_name_label"
+                android:id="@+id/lastNameLabelTextView"
+                style="@style/defaultTextBold"
+                android:layout_below="@+id/middleNameTextView"
+                android:layout_alignLeft="@+id/middleNameTextView"
+                android:layout_alignStart="@+id/middleNameTextView"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bilski"
+                android:id="@+id/lastNameTextView"
+                style="@style/defaultText"
+                android:layout_below="@+id/lastNameLabelTextView"
+                android:layout_alignLeft="@+id/lastNameLabelTextView"
+                android:layout_alignStart="@+id/lastNameLabelTextView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender_label"
+                android:id="@+id/genderLabelTextView"
+                style="@style/defaultTextBold"
+                android:layout_below="@+id/lastNameTextView"
+                android:layout_alignLeft="@+id/lastNameTextView"
+                android:layout_alignStart="@+id/lastNameTextView"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:id="@+id/genderTextView"
+                style="@style/defaultText"
+                android:layout_below="@+id/genderLabelTextView"
+                android:layout_alignLeft="@+id/genderLabelTextView"
+                android:layout_alignStart="@+id/genderLabelTextView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/birth_date_label"
+                android:id="@+id/birthDateLabelTextView"
+                style="@style/defaultTextBold"
+                android:layout_below="@+id/genderTextView"
+                android:layout_alignLeft="@+id/genderTextView"
+                android:layout_alignStart="@+id/genderTextView"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23/02/1992"
+                android:id="@+id/birthDateTextView"
+                style="@style/defaultText"
+                android:layout_below="@+id/birthDateLabelTextView"
+                android:layout_alignLeft="@+id/birthDateLabelTextView"
+                android:layout_alignStart="@+id/birthDateLabelTextView" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/fieldsetContainer"
+            android:id="@+id/aboutMeFieldsetContainer">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_me_title"
+                android:id="@+id/aboutMeTitleTextView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                style="@style/textHeadingBlue"
+                android:layout_marginBottom="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                android:id="@+id/aboutMeTextView"
+                android:layout_below="@+id/aboutMeTitleTextView"
+                android:layout_alignLeft="@+id/aboutMeTitleTextView"
+                android:layout_alignStart="@+id/aboutMeTitleTextView"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="25dp"
+                style="@style/defaultText" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

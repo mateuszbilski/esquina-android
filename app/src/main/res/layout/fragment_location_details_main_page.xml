@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    style="@style/rootContainer"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/fieldsetContainerNoPadding"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/backgroundImageView"
+                android:background="#ffbbccaa" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iconImageRelativeLayout">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/locationIconImageView"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="100dp"
+                    android:background="#ffaabbcc" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bank Polski"
+                    android:id="@+id/locationNameTextView"
+                    android:layout_marginTop="60dp"
+                    style="@style/defaultTextHeading"
+                    android:textStyle="bold"
+                    android:layout_alignTop="@+id/locationIconImageView"
+                    android:layout_toRightOf="@+id/locationIconImageView"
+                    android:layout_toEndOf="@+id/locationIconImageView"
+                    android:layout_marginLeft="15dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentTop="false"
+                android:gravity="right"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:id="@+id/buttonsBar"
+                android:layout_below="@+id/iconImageRelativeLayout">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show on map"
+                    android:id="@+id/showOnMapButton"
+                    style="@style/defaultButton" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Checkin"
+                    android:id="@+id/checkinButton"
+                    style="@style/defaultButton" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/fieldsetContainer">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/score_title"
+                android:id="@+id/scoreTitleTextView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                style="@style/textHeadingBlue"
+                android:layout_marginBottom="5dp" />
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scoreRatingBar"
+                android:layout_below="@+id/scoreTitleTextView"
+                android:layout_alignLeft="@+id/scoreTitleTextView"
+                android:layout_alignStart="@+id/scoreTitleTextView"
+                android:layout_marginBottom="5dp"
+                android:numStars="5"
+                android:stepSize="0.01"
+                android:isIndicator="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkin_count_subtitle"
+                android:id="@+id/checkinCountSubtitleTextView"
+                style="@style/textHeadingBlue"
+                android:layout_below="@+id/scoreRatingBar"
+                android:layout_alignLeft="@+id/scoreRatingBar"
+                android:layout_alignStart="@+id/scoreRatingBar"
+                android:layout_marginBottom="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1250"
+                android:id="@+id/checkinCountTextView"
+                android:layout_below="@+id/checkinCountSubtitleTextView"
+                android:layout_alignLeft="@+id/checkinCountSubtitleTextView"
+                android:layout_alignStart="@+id/checkinCountSubtitleTextView"
+                style="@style/defaultTextHeading"
+                android:layout_marginBottom="10dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/fieldsetContainer" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/basic_information_title"
+                android:id="@+id/basicInformationTitleTextView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                style="@style/textHeadingBlue"
+                android:layout_marginBottom="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/latitude_label"
+                android:id="@+id/latitudeLabelTextView"
+                android:layout_below="@+id/basicInformationTitleTextView"
+                android:layout_alignLeft="@+id/basicInformationTitleTextView"
+                android:layout_alignStart="@+id/basicInformationTitleTextView"
+                style="@style/defaultTextBold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50.123456"
+                android:id="@+id/latitudeTextView"
+                android:layout_below="@+id/latitudeLabelTextView"
+                android:layout_alignLeft="@+id/latitudeLabelTextView"
+                android:layout_alignStart="@+id/latitudeLabelTextView"
+                style="@style/defaultText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/longitude_label"
+                android:id="@+id/longitudeLabelTextView"
+                android:layout_below="@+id/latitudeTextView"
+                android:layout_alignLeft="@+id/latitudeTextView"
+                android:layout_alignStart="@+id/latitudeTextView"
+                android:layout_marginTop="10dp"
+                style="@style/defaultTextBold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20.123456"
+                android:id="@+id/longitudeTextView"
+                android:layout_below="@+id/longitudeLabelTextView"
+                android:layout_alignLeft="@+id/longitudeLabelTextView"
+                android:layout_alignStart="@+id/longitudeLabelTextView"
+                style="@style/defaultText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/owner_label"
+                android:id="@+id/ownerLabelTextView"
+                android:layout_below="@+id/longitudeTextView"
+                android:layout_alignLeft="@+id/longitudeTextView"
+                android:layout_alignStart="@+id/longitudeTextView"
+                style="@style/defaultTextBold"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Richie Rich"
+                android:id="@+id/ownerTextView"
+                android:layout_below="@+id/ownerLabelTextView"
+                android:layout_alignLeft="@+id/ownerLabelTextView"
+                android:layout_alignStart="@+id/ownerLabelTextView"
+                style="@style/defaultText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/website_label"
+                android:id="@+id/websiteLabelTextView"
+                android:layout_below="@+id/ownerTextView"
+                android:layout_alignLeft="@+id/ownerTextView"
+                android:layout_alignStart="@+id/ownerTextView"
+                style="@style/defaultTextBold"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/websiteTextView"
+                android:layout_below="@+id/websiteLabelTextView"
+                android:layout_alignLeft="@+id/websiteLabelTextView"
+                android:layout_alignStart="@+id/websiteLabelTextView"
+                style="@style/defaultText"
+                android:autoLink="web"
+                android:linksClickable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Created"
+                android:id="@+id/createdLabelTextView"
+                android:layout_below="@+id/websiteTextView"
+                android:layout_alignLeft="@+id/websiteTextView"
+                android:layout_alignStart="@+id/websiteTextView"
+                android:layout_marginTop="10dp"
+                style="@style/defaultTextBold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10/10/2014"
+                android:id="@+id/createdTextView"
+                android:layout_below="@+id/createdLabelTextView"
+                android:layout_alignLeft="@+id/createdLabelTextView"
+                android:layout_alignStart="@+id/createdLabelTextView"
+                style="@style/defaultText" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/fieldsetContainer"
+            android:id="@+id/addressFieldsetContainer" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address_title"
+                android:id="@+id/addressTitleTextView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                style="@style/textHeadingBlue"
+                android:layout_marginBottom="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/country_label"
+                android:id="@+id/countryLabelTextView"
+                android:layout_below="@+id/addressTitleTextView"
+                android:layout_alignLeft="@+id/addressTitleTextView"
+                android:layout_alignStart="@+id/addressTitleTextView"
+                style="@style/defaultTextBold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poland"
+                android:id="@+id/countryTextView"
+                android:layout_below="@+id/countryLabelTextView"
+                android:layout_alignLeft="@+id/countryLabelTextView"
+                android:layout_alignStart="@+id/countryLabelTextView"
+                style="@style/defaultText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city_label"
+                android:id="@+id/cityLabelTextView"
+                android:layout_below="@+id/countryTextView"
+                android:layout_alignLeft="@+id/countryTextView"
+                android:layout_alignStart="@+id/countryTextView"
+                style="@style/defaultTextBold"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gliwice"
+                android:id="@+id/cityTextView"
+                android:layout_below="@+id/cityLabelTextView"
+                android:layout_alignLeft="@+id/cityLabelTextView"
+                android:layout_alignStart="@+id/cityLabelTextView"
+                style="@style/defaultText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/postal_code_label"
+                android:id="@+id/postalCodeLabelTextView"
+                android:layout_below="@+id/cityTextView"
+                android:layout_alignLeft="@+id/cityTextView"
+                android:layout_alignStart="@+id/cityTextView"
+                style="@style/defaultTextBold"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="44-100"
+                android:id="@+id/postalCodeTextView"
+                android:layout_below="@+id/postalCodeLabelTextView"
+                android:layout_alignLeft="@+id/postalCodeLabelTextView"
+                android:layout_alignStart="@+id/postalCodeLabelTextView"
+                style="@style/defaultText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/street_label"
+                android:id="@+id/streetLabelTextView"
+                android:layout_below="@+id/postalCodeTextView"
+                android:layout_alignLeft="@+id/postalCodeTextView"
+                android:layout_alignStart="@+id/postalCodeTextView"
+                style="@style/defaultTextBold"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zwycięstwa 62a"
+                android:id="@+id/streetTextView"
+                android:layout_below="@+id/streetLabelTextView"
+                android:layout_alignLeft="@+id/streetLabelTextView"
+                android:layout_alignStart="@+id/streetLabelTextView"
+                style="@style/defaultText" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/fieldsetContainer" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description_title"
+                android:id="@+id/descriptionTitleTextView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                style="@style/textHeadingBlue"
+                android:layout_marginBottom="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                android:id="@+id/descriptionTextView"
+                android:layout_below="@+id/descriptionTitleTextView"
+                android:layout_alignLeft="@+id/descriptionTitleTextView"
+                android:layout_alignStart="@+id/descriptionTitleTextView"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="25dp"
+                style="@style/defaultText" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/fieldsetContainer"
+            android:id="@+id/tagsFieldsetContainer">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tags_title"
+                android:id="@+id/tagsTitleTextView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                style="@style/textHeadingBlue"
+                android:layout_marginBottom="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tagsLinearLayout"
+                android:orientation="vertical"
+                android:layout_below="@+id/tagsTitleTextView"
+                android:layout_alignLeft="@+id/tagsTitleTextView"
+                android:layout_alignStart="@+id/tagsTitleTextView" >
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

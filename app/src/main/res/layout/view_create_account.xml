@@ -1,0 +1,243 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:id="@+id/scrollView"
+    android:layout_height="match_parent"
+    tools:context="com.squeezedlemon.esquina.client.android.fragments.login.CreateAccountFragment"
+    style="@style/rootContainer" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/fieldsetContainer" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:text="@string/create_account_title"
+            android:id="@+id/createAccountTextView"
+            android:layout_marginLeft="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold|italic"
+            android:typeface="sans" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/mandatory_fields_info"
+            android:id="@+id/mandatoryFieldsTextView"
+            android:layout_below="@+id/createAccountTextView"
+            android:layout_alignLeft="@+id/createAccountTextView"
+            android:layout_alignStart="@+id/createAccountTextView" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/accountNameEditText"
+            android:layout_below="@+id/mandatoryFieldsTextView"
+            android:layout_alignLeft="@+id/mandatoryFieldsTextView"
+            android:layout_alignStart="@+id/mandatoryFieldsTextView"
+            android:layout_marginTop="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp"
+            android:hint="@string/account_name_hint_mandatory" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/passwordEditText"
+            android:layout_below="@+id/accountNameEditText"
+            android:layout_alignLeft="@+id/accountNameEditText"
+            android:layout_alignStart="@+id/accountNameEditText"
+            android:layout_alignRight="@+id/accountNameEditText"
+            android:layout_alignEnd="@+id/accountNameEditText"
+            android:hint="@string/password_hint_mandatory" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/retypePasswordEditText"
+            android:layout_below="@+id/passwordEditText"
+            android:layout_alignLeft="@+id/passwordEditText"
+            android:layout_alignStart="@+id/passwordEditText"
+            android:layout_alignRight="@+id/passwordEditText"
+            android:layout_alignEnd="@+id/passwordEditText"
+            android:hint="@string/retype_password_hint_mandatory" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/retypePasswordEditText"
+            android:layout_alignLeft="@+id/retypePasswordEditText"
+            android:layout_alignStart="@+id/retypePasswordEditText"
+            android:id="@+id/languageSelectorLayout"
+            android:layout_alignRight="@+id/retypePasswordEditText"
+            android:measureWithLargestChild="true">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/languageSpinner"
+                android:spinnerMode="dialog"
+                android:layout_weight="1"
+                android:prompt="@string/language_prompt" />
+
+            <TextView
+                style="@android:style/TextAppearance.Widget.EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="* "
+                android:id="@+id/languageAsteriskTextView"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:clickable="true" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/firstNameEditText"
+            android:layout_marginTop="10dp"
+            android:hint="@string/first_name_hint_mandatory"
+            android:layout_below="@+id/languageSelectorLayout"
+            android:layout_alignLeft="@+id/languageSelectorLayout"
+            android:layout_alignRight="@+id/languageSelectorLayout" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/middleNameEditText"
+            android:layout_below="@+id/firstNameEditText"
+            android:layout_alignLeft="@+id/firstNameEditText"
+            android:layout_alignStart="@+id/firstNameEditText"
+            android:layout_alignRight="@+id/firstNameEditText"
+            android:layout_alignEnd="@+id/firstNameEditText"
+            android:hint="@string/middle_name_hint" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lastNameEditText"
+            android:layout_below="@+id/middleNameEditText"
+            android:layout_alignLeft="@+id/middleNameEditText"
+            android:layout_alignStart="@+id/middleNameEditText"
+            android:layout_alignRight="@+id/middleNameEditText"
+            android:layout_alignEnd="@+id/middleNameEditText"
+            android:hint="@string/last_name_hint_mandatory" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/lastNameEditText"
+            android:layout_alignLeft="@+id/lastNameEditText"
+            android:layout_alignStart="@+id/lastNameEditText"
+            android:layout_alignRight="@+id/lastNameEditText"
+            android:layout_alignEnd="@+id/lastNameEditText"
+            android:id="@+id/birthDateLayout"
+            android:weightSum="1">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/birthDateEditText"
+                android:hint="@string/birth_date_hint"
+                android:focusable="false"
+                android:layout_weight="1" />
+
+            <TextView
+                style="@android:style/TextAppearance.Widget.EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="* "
+                android:id="@+id/birthDateErrorTextView"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical|right"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/birthDateLayout"
+            android:layout_alignLeft="@+id/birthDateLayout"
+            android:layout_alignStart="@+id/birthDateLayout"
+            android:layout_alignRight="@+id/birthDateLayout"
+            android:layout_alignEnd="@+id/birthDateLayout"
+            android:orientation="horizontal"
+            android:id="@+id/genderRadioGroup"
+            android:weightSum="1">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender_male_label"
+                android:id="@+id/maleRadioButton"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender_female_label"
+                android:id="@+id/femaleRadioButton"
+                android:layout_marginLeft="15dp"
+                android:checked="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* "
+                android:id="@+id/genderAsteriskTextView"
+                style="@android:style/TextAppearance.Widget.EditText"
+                android:layout_marginLeft="10dp"
+                android:gravity="right"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true" />
+        </RadioGroup>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/aboutMeEditText"
+            android:layout_below="@+id/genderRadioGroup"
+            android:layout_alignLeft="@+id/genderRadioGroup"
+            android:layout_alignStart="@+id/genderRadioGroup"
+            android:layout_marginTop="10dp"
+            android:layout_alignRight="@+id/genderRadioGroup"
+            android:layout_alignEnd="@+id/genderRadioGroup"
+            android:hint="@string/about_me_hint"
+            android:minLines="3" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_account_button"
+            android:id="@+id/createAccountButton"
+            android:layout_below="@+id/aboutMeEditText"
+            android:layout_alignRight="@+id/aboutMeEditText"
+            android:layout_alignEnd="@+id/aboutMeEditText"
+            android:layout_marginTop="20dp" />
+
+    </RelativeLayout>
+</ScrollView>
+

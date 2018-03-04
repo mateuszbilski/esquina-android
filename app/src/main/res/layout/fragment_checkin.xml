@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/rootContainer"
+    android:paddingBottom="0dp">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        style="@style/marginContainerTop"
+        android:paddingBottom="0dp"
+        android:layout_marginBottom="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/fieldsetContainer"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scoreCheckBoxLabel"
+                android:id="@+id/scoreEnabledCheckBox"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="0dp"
+                android:checked="false" />
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scoreRatingBar"
+                android:layout_below="@+id/scoreEnabledCheckBox"
+                android:layout_centerHorizontal="true"
+                android:numStars="5"
+                android:stepSize="0.25" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/commentCheckBoxLabel"
+                android:id="@+id/commentEnabledCheckBox"
+                android:layout_below="@+id/scoreRatingBar"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:checked="false" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/commentEditText"
+                android:layout_below="@+id/commentEnabledCheckBox"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:minLines="2"
+                android:hint="@string/commentEditTextHint" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/commentEditText"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp">
+
+                <Button
+                    style="@style/defaultButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkInButtonLabel"
+                    android:id="@+id/checkinButton"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true" />
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gpsProgressBar"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:indeterminate="false"
+                    style="?android:attr/progressBarStyleInverse" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Waiting for GPS"
+                    android:id="@+id/gpsTextView"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/gpsProgressBar"
+                    style="@style/defaultTextBold"
+                    android:layout_toLeftOf="@+id/checkinButton"
+                    android:layout_toStartOf="@+id/checkinButton" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>
